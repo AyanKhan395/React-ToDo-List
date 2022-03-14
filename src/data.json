@@ -1,81 +1,121 @@
 [{
     "id": 1,
     "task": "Give dog a bath",
-    "complete": true
+    "complete": true,
+    "date": null,
+    "priority": "Low"
   }, {
     "id": 2,
     "task": "Do laundry",
-    "complete": true
+    "complete": true,
+    "date": null,
+    "priority": "High"
   }, {
     "id": 3,
     "task": "Vacuum floor",
-    "complete": false
+    "complete": false,
+    "date": null,
+    "priority": "Low"
   }, {
     "id": 4,
     "task": "Feed cat",
-    "complete": true
+    "complete": true,
+    "date": null,
+    "priority": "Low"
   }, {
     "id": 5,
     "task": "Change light bulbs",
-    "complete": false
+    "complete": false,
+    "date": null,
+    "priority": "Medium"
   }, {
     "id": 6,
     "task": "Go to Store",
-    "complete": true
+    "complete": true,
+    "date": null,
+    "priority": "High"
   }, {
     "id": 7,
     "task": "Fill gas tank",
-    "complete": true
+    "complete": true,
+    "date": null,
+    "priority": "High"
   }, {
     "id": 8,
     "task": "Change linens",
-    "complete": false
+    "complete": false,
+    "date": null,
+    "priority": "Low"
   }, {
     "id": 9,
     "task": "Rake leaves",
-    "complete": true
+    "complete": true,
+    "date": null,
+    "priority": "Low"
   }, {
     "id": 10,
     "task": "Bake Cookies",
-    "complete": false
+    "complete": false,
+    "date": null,
+    "priority": "Low"
   }, {
     "id": 11,
     "task": "Take nap",
-    "complete": true
+    "complete": true,
+    "date": null,
+    "priority": "Medium"
   }, {
     "id": 12,
     "task": "Read book",
-    "complete": true
+    "complete": true,
+    "date": null,
+    "priority": "High"
   }, {
     "id": 13,
     "task": "Exercise",
-    "complete": false
+    "complete": false,
+    "date": null,
+    "priority": "Low"
   }, {
     "id": 14,
     "task": "Give dog a bath",
-    "complete": false
+    "complete": false,
+    "date": null,
+    "priority": "Low"
   }, {
     "id": 15,
     "task": "Do laundry",
-    "complete": false
+    "complete": false,
+    "date": null,
+    "priority": "Low"
   }, {
     "id": 16,
     "task": "Vacuum floor",
-    "complete": false
+    "complete": false,
+    "date": null,
+    "priority": "Medium"
   }, {
     "id": 17,
     "task": "Feed cat",
-    "complete": true
+    "complete": true,
+    "date": null,
+    "priority": "Medium"
   }, {
     "id": 18,
     "task": "Change light bulbs",
-    "complete": false
+    "complete": false,
+    "date": null,
+    "priority": "Low"
   }, {
     "id": 19,
     "task": "Go to Store",
-    "complete": false
+    "complete": false,
+    "date": null,
+    "priority": "High"
   }, {
     "id": 20,
     "task": "Fill gas tank",
-    "complete": false
+    "complete": false,
+    "date": null,
+    "priority": "Medium"
   }]

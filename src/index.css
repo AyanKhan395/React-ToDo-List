@@ -14,3 +14,11 @@ code {
 .strike {
   text-decoration: line-through;
 }
+
+.center {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: 5px solid #ffff00;
+  padding: 10px;
+}

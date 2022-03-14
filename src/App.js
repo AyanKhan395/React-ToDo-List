@@ -8,7 +8,11 @@ import ToDoForm from './ToDoForm';
 
 function App() {
   
-  const [ toDoList, setToDoList ] = useState(data);
+  const [toDoList, setToDoList ] = useState(data);
+  const [userInput, setUserInput ] = useState('');
+  const [startDate, setStartDate] = useState(new Date());
+  const [pirority, setPirority ] = useState('');
+
 
   const handleToggle = (id) => {
     let mapped = toDoList.map(task => {
@@ -24,9 +28,13 @@ function App() {
     setToDoList(filtered);
   }
 
-  const addTask = (userInput ) => {
+  const addTask = (userInput, startDate, pirority ) => {
     let copy = [...toDoList];
-    copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
+    copy = [...copy, { id: toDoList.length + 1,
+                        task: userInput,
+                        complete: false,
+                        date: startDate,
+                        priority: pirority }];
     setToDoList(copy);
   }
 
@@ -34,7 +42,7 @@ function App() {
     <div className="App">
       <Header />
       <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
-      <ToDoForm addTask={addTask}/>
+      <ToDoForm addTask={addTask} userInput={userInput} setUserInput={setUserInput} startDate={startDate} setStartDate={setStartDate} pirority={pirority} setPirority={setPirority} />
     </div>
   );
 }
