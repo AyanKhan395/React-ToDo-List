@@ -11,7 +11,7 @@ function App() {
   const [toDoList, setToDoList ] = useState(data);
   const [userInput, setUserInput ] = useState('');
   const [startDate, setStartDate] = useState(new Date());
-  const [pirority, setPirority ] = useState('');
+  const [pirority, setPirority ] = useState('Low');
 
 
   const handleToggle = (id) => {
@@ -41,8 +41,26 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
-      <ToDoForm addTask={addTask} userInput={userInput} setUserInput={setUserInput} startDate={startDate} setStartDate={setStartDate} pirority={pirority} setPirority={setPirority} />
+      <div class="row">
+        <div class="col-lg-4 col-md-3 col-sm-2"></div>
+
+        <div class="col-lg-4 col-md-6 col-sm-8">
+          <ToDoForm addTask={addTask} userInput={userInput} setUserInput={setUserInput} startDate={startDate} setStartDate={setStartDate} pirority={pirority} setPirority={setPirority}/>
+        </div>
+
+        <div class="col-lg-4 col-md-3 col-sm-2"></div>
+      </div>
+
+      
+      <div class="row">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8">
+          <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
+        </div>
+
+        <div class="col-sm-2"></div>
+      </div>
     </div>
   );
 }
