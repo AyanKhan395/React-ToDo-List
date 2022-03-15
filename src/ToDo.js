@@ -7,7 +7,7 @@ const ToDo = ({todo, handleToggle}) => {
         if (todo.priority === 'Low') {
             color = 'green';
         } else if (todo.priority === 'Medium') {
-            color = 'orange';
+            color = 'yellow';
         } else if (todo.priority === 'High') {
             color = 'red';
         } else {
@@ -29,10 +29,10 @@ const ToDo = ({todo, handleToggle}) => {
             <table class="table table-striped">
                 <tbody>
                     <tr>
-                    <th scope="row"  style={{width: '100px'}}>{todo.id}</th>
-                    <td  style={{width: '300px'}}>{todo.task}</td>
+                    <th scope="row"  style={{width: '100px', color: "#1E1232"}}>{todo.id}</th>
+                    <td  style={{width: '300px', color: "#1E1232"}}>{todo.task}</td>
                     <td style={{color: getColor(todo.priority), width: '300px'}}>{todo.priority}</td>
-                    <td  style={{width: '300px'}}>{todo.date ? todo.date.toLocaleDateString('fr-FR'):"-"}</td>
+                    <td  style={{width: '300px', color: "#1E1232"}}>{todo.date ? todo.date.toLocaleDateString('fr-FR'):"-"}</td>
                     </tr>
                 </tbody>
             </table>

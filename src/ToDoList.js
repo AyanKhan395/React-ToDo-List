@@ -8,10 +8,10 @@ const ToDoList = ({toDoList, handleToggle, handleFilter}) => {
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th scope="col" style={{width: '100px'}}>#</th>
-                        <th scope="col" style={{width: '300px'}}>First</th>
-                        <th scope="col" style={{width: '300px'}}>Last</th>
-                        <th scope="col" style={{width: '300px'}}>Handle</th>
+                        <th scope="col" style={{width: '100px', color: "#61DAC4"}}>#</th>
+                        <th scope="col" style={{width: '300px', color: "#61DAC4"}}>First</th>
+                        <th scope="col" style={{width: '300px', color: "#61DAC4"}}>Last</th>
+                        <th scope="col" style={{width: '300px', color: "#61DAC4"}}>Handle</th>
                     </tr>
                 </thead>
             </table>

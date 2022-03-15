@@ -15,9 +15,9 @@ const ToDoForm = ({ addTask, userInput, setUserInput, startDate, setStartDate, p
     }
     
     return (
-        <form onSubmit={handleSubmit} style={{margin: '40px', border: '2px solid', borderRadius: '15px', paddingBlock: '30px'
-        }}>
-            <h4>Form</h4><br/>
+        <form classname="form1" onSubmit={handleSubmit}  style={{margin: '40px', border: '2px solid', borderRadius: '15px', paddingBlock: '30px', backgroundColor: '#20365E'
+    }}>
+            <h4 style={{color: "#B0A8B9"}}>Form</h4><br/>
             <input value={userInput} type="text" onChange={handleChange} placeholder="Enter task..." required=" "/>
             <br/>
             <br/>

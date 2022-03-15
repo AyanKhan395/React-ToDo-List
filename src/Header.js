@@ -3,7 +3,7 @@ import "./App.css"
  
 const Header = () => {
    return (
-       <header style={{marginTop: '30px', marginBottom: '40px'}}>
+       <header style={{padding: '40px', color:'#1E1232'}}>
            <h1>To Do List</h1>
        </header>
    );
