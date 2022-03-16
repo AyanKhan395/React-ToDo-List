@@ -39,7 +39,7 @@ const ToDoForm = ({ addTask, userInput, setUserInput, startDate, setStartDate, p
                     <Dropdown
                         placeholder="Select Priority"
                         options={['Low', 'Medium', 'High']}
-                        value='Low'
+                        value={pirority}
                         onChange={(value) => setPirority(value['value'])}
                         onSelect={(value) => console.log('selected!', value['value'])} 
                     />

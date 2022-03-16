@@ -13,7 +13,7 @@ function App() {
   const [startDate, setStartDate] = useState(new Date());
   const [pirority, setPirority ] = useState('Low');
   const [inputText, setInputText] = useState("");
-  const [editTodo, setEditTodo] = useState("");
+  const [editTodo, setEditTodo] = useState(false);
 
 
   const handleToggle = (id) => {
@@ -58,15 +58,17 @@ function App() {
 
         <div class="col-lg-4 col-md-3 col-sm-2"></div>
       </div>
-<div style={{marginBlock: "20px"}}>
-  <div class="container" style={{display: 'inline', padding: '2px 0px',  border: '2px solid black'}}>
-    <input placeholder=" Search..."  value={inputText} onChange={(e)=>setInputText(e.target.value)} style={{border: "none", outline: "none"
-    }}></input>
-    <div style={{alignContent: 'center',backgroundColor: "#0091C0", display: 'inline', padding: "2px", paddingLeft: "8px", paddingRight: "8px", borderColor:"black", borderLeft: "2px solid black"}}>
-      <i class="fa fa-search" ></i>
-      </div>
-    </div>
-  </div>
+
+
+      <div style={{marginBlock: "20px"}}>
+        <div class="container" style={{display: 'inline', padding: '2px 0px',  border: '2px solid black'}}>
+          <input placeholder=" Search..."  value={inputText} onChange={(e)=>setInputText(e.target.value)} style={{border: "none", outline: "none"
+          }}></input>
+          <div style={{alignContent: 'center',backgroundColor: "#0091C0", display: 'inline', padding: "2px", paddingLeft: "8px", paddingRight: "8px", borderColor:"black", borderLeft: "2px solid black"}}>
+            <i class="fa fa-search" ></i>
+            </div>
+          </div>
+        </div>
       
       <div class="row">
         <div class="col-sm-2"></div>

@@ -29,24 +29,23 @@ const ToDo = ({toDoList, setToDoList, todo, handleToggle, editTodo, setEditTodo,
 
     const handleEditTodo = (id) => {
         const newTodos = toDoList.filter(e=> e.id === id);
-        setEditTodo(newTodos)
+        setEditTodo(id)
     }
-
 
     console.log(todo)
     return (
-        <div id={todo.id} key={todo.id + todo.task} name="todo" value={todo.id} className={todo.complete ? "todo strike" : "todo"}>
+        <div id={todo.id} key={todo.id + todo.task} name="todo" value={todo.id} >
             
             <table class="table table-striped">
                 <tbody>
                     <tr style={{textAlign: "left"}}>
                     <th scope="row"  style={{width: '200px', color: "#1E1232", paddingLeft: "40px"}}>{todo.id}</th>
-                    <td style={{width: '300px', color: "#1E1232"}}>{todo.task}</td>
-                    <td style={{color: getColor(todo.priority), width: '200px'}}>{todo.priority}</td>
+                    <td style={{width: '300px', color: "#1E1232"}} id={todo.id} onClick={handleClick} className={todo.complete ? "todo strike" : "todo"}>{todo.task}</td>
+                    <td style={{width: '200px', color: getColor(todo.priority)}}>{todo.priority}</td>
                     <td style={{width: '300px', color: "#1E1232"}}>{todo.date ? todo.date.toLocaleDateString('fr-FR'):"-"}</td>
-                    <td id={todo.id} style={{width: '100px', color: "#1E1232"}}>
+                    <td style={{width: '100px', color: "#1E1232"}}>
                         <FontAwesome name="edit"  onClick={()=>handleEditTodo(todo.id)}/>
-                        <FontAwesome name="trash" style={{marginLeft: "20px"}} onClick={()=>handleDeleteTodo(todo.id)}/>
+                        <FontAwesome name="trash" style={{marginLeft: "20px", zIndex: "-1"}} onClick={()=>handleDeleteTodo(todo.id)}/>
                         </td>
                     </tr>
                 </tbody>
