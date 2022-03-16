@@ -3,7 +3,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Dropdown } from 'react-dropdown-now';
 import 'react-dropdown-now/style.css';
 
-const ToDoForm = ({ addTask, userInput, setUserInput, startDate, setStartDate, pirority, setPirority }) => {
+const ToDoForm = ({ addTask, userInput, setUserInput, startDate, setStartDate, pirority, setPirority, editTodo, setEditTodo }) => {
     const handleChange = (e) => {
         setUserInput(e.currentTarget.value)
     }
