@@ -17,6 +17,12 @@ const ToDo = ({toDoList, setToDoList, todo, handleToggle, editTodo, setEditTodo,
         return color;
     };
 
+    // let count = 0;
+    // const getCount = () =>{
+    //     count++;
+    //     return count;
+    // }
+
     const handleClick = (e) => {
         e.preventDefault()
         handleToggle(e.currentTarget.id)
@@ -28,8 +34,10 @@ const ToDo = ({toDoList, setToDoList, todo, handleToggle, editTodo, setEditTodo,
     }
 
     const handleEditTodo = (id) => {
-        const newTodos = toDoList.filter(e=> e.id === id);
-        setEditTodo(id)
+        setEditTodo(id);
+        // const newTodos = toDoList.filter(e=> e.id !== id);
+        // setToDoList(newTodos)
+        console.log(id);
     }
 
     console.log(todo)

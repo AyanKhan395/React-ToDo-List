@@ -2,20 +2,48 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Dropdown } from 'react-dropdown-now';
 import 'react-dropdown-now/style.css';
+import React, { useEffect } from 'react';
 
-const ToDoForm = ({ addTask, userInput, setUserInput, startDate, setStartDate, pirority, setPirority, editTodo, setEditTodo }) => {
+const ToDoForm = ({toDoList, setToDoList , addTask, userInput, setUserInput, startDate, setStartDate, pirority, setPirority, editTodo, setEditTodo }) => {
     const handleChange = (e) => {
         setUserInput(e.currentTarget.value)
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addTask(userInput, startDate, pirority);
         setUserInput("");
+        setPirority("Low");
+        setStartDate(new Date());
+        addTask(userInput, startDate, pirority);
     }
+
+    useEffect(() => {
+        if(editTodo === 0){
+            setUserInput("");
+            setPirority("Low");
+            setStartDate(new Date());
+            console.log("IF");
+        }else{
+            toDoList.map(todo => {
+                if(todo.id === editTodo){
+                    console.log(todo.id);
+                    setUserInput(todo.task);
+                    setPirority(todo.priority);
+                    if(todo.date !== null){
+                        setStartDate(todo.date)
+                    }
+                }
+            })
+            
+            const newTodos = toDoList.filter(e=> e.id !== editTodo);
+            setToDoList(newTodos);
+
+            console.log("Else");
+        }
+    },[editTodo]);
     
     return (
-        <form classname="form1" onSubmit={handleSubmit}  style={{margin: '40px', border: '2px solid', borderRadius: '15px', paddingBlock: '30px', backgroundColor: '#20365E'
+        <form classname="form1" onSubmit={handleSubmit} style={{margin: '40px', border: '2px solid', borderRadius: '15px', paddingBlock: '30px', backgroundColor: '#20365E'
     }}>
             <h4 style={{color: "#B0A8B9"}}>Form</h4><br/>
             <input value={userInput} type="text" onChange={handleChange} placeholder="Enter task..." required=" "/>

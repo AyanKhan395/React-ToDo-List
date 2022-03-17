@@ -13,7 +13,7 @@ function App() {
   const [startDate, setStartDate] = useState(new Date());
   const [pirority, setPirority ] = useState('Low');
   const [inputText, setInputText] = useState("");
-  const [editTodo, setEditTodo] = useState(false);
+  const [editTodo, setEditTodo] = useState(0);
 
 
   const handleToggle = (id) => {
@@ -37,13 +37,24 @@ function App() {
 
   const addTask = (userInput, startDate, pirority ) => {
     let copy = [...toDoList];
-    copy = [...copy, { id: toDoList.length + 1,
-                        task: userInput,
-                        complete: false,
-                        date: startDate,
-                        priority: pirority }];
-    setToDoList(copy);
+    if(editTodo === 0){
+      copy = [...copy, { id: toDoList.length + 1,
+                          task: userInput,
+                          complete: false,
+                          date: startDate,
+                          priority: pirority }];
+      setToDoList(copy);
+    }else{
+      copy = [...copy, { id: editTodo,
+                          task: userInput,
+                          complete: false,
+                          date: startDate,
+                          priority: pirority }];
+      setToDoList(copy);
+      setEditTodo(0);
+    }
   }
+
 
   return (
     <div className="App">
@@ -52,7 +63,7 @@ function App() {
         <div class="col-lg-4 col-md-3 col-sm-2"></div>
 
         <div class="col-lg-4 col-md-6 col-sm-8">
-          <ToDoForm addTask={addTask} userInput={userInput} setUserInput={setUserInput} 
+          <ToDoForm toDoList={toDoList} setToDoList={setToDoList} addTask={addTask} userInput={userInput} setUserInput={setUserInput} 
           startDate={startDate} setStartDate={setStartDate} pirority={pirority} setPirority={setPirority} editTodo = {editTodo} setEditTodo = {setEditTodo}/>
         </div>
 
