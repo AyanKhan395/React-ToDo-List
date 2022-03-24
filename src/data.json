@@ -1,7 +1,7 @@
 [{
     "id": 1,
     "task": "Give dog a bath",
-    "complete": true,
+    "complete": false,
     "date": null,
     "priority": "Low"
   }, {
